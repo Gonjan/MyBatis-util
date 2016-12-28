@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+<!-- 	<dbconnect>
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/submission?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull</url>
+        <username>root</username>
+        <password>829012</password>
+    </dbconnect> -->
+    <dbconnect>
+        <driver>oracle.jdbc.OracleDriver</driver>
+        <url>jdbc:oracle:thin:@10.10.103.24:1521:calldb</url>
+        <username>calldb</username>
+        <password>calldb</password>
+    </dbconnect>
+    
+    <basedao>cn.com.zwan.crm.core.base.dao.BaseDao</basedao><!-- basedao的放置路径 -->
+    <baseservice>cn.com.zwan.crm.core.base.service.BaseService</baseservice><!-- baseservice的放置路径 -->
+    <baseentityservice>cn.com.zwan.crm.core.base.entity.BaseEntity</baseentityservice> <!--baseentityservice的放置路径-->
+     
+    <srcpath>G:/PetLoveWorkSpace/crm-parent/zwpass-service/src/main/java/</srcpath><!-- 源代码的放置地点,一定要以/结尾以表示是个文件夹 -->
+    <daopath>cn.com.zwan.crm.zwpass.dao</daopath><!-- dao的放置路径 -->
+    <mapperpath>cn.com.zwan.crm.zwpass.model.xml</mapperpath><!-- mybatis mapper的放置路径 -->
+    <modelpath>cn.com.zwan.crm.zwpass.model</modelpath><!-- model的放置路径 -->
+    <servicepath>cn.com.zwan.crm.zwpass.service</servicepath><!-- service的放置路径 -->
+    <serviceimplpath>cn.com.zwan.crm.zwpass.service.impl</serviceimplpath><!-- serviceimplpath的放置路径 -->
+    <tables><!-- table的命名规则，1，要全部大写，2，中间可按下划线进行分隔意思 -->
+      
+        <table>TB_COMPANYDEVICE</table>
+     
+    </tables>
+</root>
