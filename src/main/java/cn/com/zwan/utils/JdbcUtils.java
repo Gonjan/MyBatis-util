@@ -160,7 +160,7 @@ public class JdbcUtils {
         } else if ("INT".equals(columnType) || "NUMBER".equals(columnType)) {
             return "Integer";
         } else if ("DOUBLE".equals(columnType)) {
-            return "Double";
+            return "Double"; //2017/3/13
         } else if ("VARCHAR".equals(columnType) || "VARCHAR2".equals(columnType)) {
             return "String";
         }
