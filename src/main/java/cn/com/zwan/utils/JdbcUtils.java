@@ -3,7 +3,6 @@ package cn.com.zwan.utils;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -156,8 +155,11 @@ public class JdbcUtils {
         } else if ("DECIMAL".equals(columnType)) {
             return "BigDecimal";
         } else if ("TIMESTAMP".equals(columnType)) {
+            return "java.sql.Timestamp";
+        } 
+        else if ("DATE".equals(columnType)) {
             return "Date";
-        } else if ("INT".equals(columnType) || "NUMBER".equals(columnType)) {
+        }else if ("INT".equals(columnType) || "NUMBER".equals(columnType)) {
             return "Integer";
         } else if ("DOUBLE".equals(columnType)) {
             return "Double"; //2017/3/13
